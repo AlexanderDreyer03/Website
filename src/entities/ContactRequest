@@ -1,0 +1,63 @@
+{
+  "name": "ContactRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name des Kontakts"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "E-Mail-Adresse"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefonnummer"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "einzelunternehmer",
+        "selbststaendig",
+        "gmbh",
+        "gmbh_co_kg",
+        "ag",
+        "ek",
+        "freiberufler",
+        "angestellter",
+        "sonstiges"
+      ],
+      "description": "Gesellschaftsform oder Status"
+    },
+    "situation": {
+      "type": "string",
+      "description": "Beschreibung der Situation/Fragen"
+    },
+    "page_source": {
+      "type": "string",
+      "description": "Von welcher Seite stammt die Anfrage"
+    },
+    "status_lead": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "qualified",
+        "converted"
+      ],
+      "default": "new",
+      "description": "Lead-Status"
+    },
+    "privacy_accepted": {
+      "type": "boolean",
+      "description": "Datenschutz akzeptiert"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "phone",
+    "privacy_accepted"
+  ]
+}
