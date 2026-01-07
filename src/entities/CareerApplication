@@ -1,0 +1,68 @@
+{
+  "name": "CareerApplication",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "description": "Vorname"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Nachname"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "E-Mail-Adresse"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefonnummer"
+    },
+    "age": {
+      "type": "number",
+      "description": "Alter"
+    },
+    "current_position": {
+      "type": "string",
+      "description": "Aktuelle Berufliche Position"
+    },
+    "experience": {
+      "type": "string",
+      "description": "Erfahrung in der Finanzberatung"
+    },
+    "region": {
+      "type": "string",
+      "description": "\u00d6rtliche Herkunft / Region"
+    },
+    "additional_info": {
+      "type": "string",
+      "description": "Weitere Informationen"
+    },
+    "privacy_accepted": {
+      "type": "boolean",
+      "description": "Datenschutz akzeptiert"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "reviewing",
+        "interview",
+        "rejected",
+        "hired"
+      ],
+      "default": "new",
+      "description": "Bewerbungsstatus"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "email",
+    "phone",
+    "current_position",
+    "experience",
+    "privacy_accepted"
+  ]
+}
